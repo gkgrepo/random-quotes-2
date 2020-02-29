@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/random-quotes-2/static/css/main.d86ebb1c.chunk.css",
+    "main.css": "/random-quotes-2/static/css/main.59964858.chunk.css",
     "main.js": "/random-quotes-2/static/js/main.bf7d5626.chunk.js",
     "main.js.map": "/random-quotes-2/static/js/main.bf7d5626.chunk.js.map",
     "runtime-main.js": "/random-quotes-2/static/js/runtime-main.f0c81083.js",
@@ -8,16 +8,16 @@
     "static/js/2.5c8a544c.chunk.js": "/random-quotes-2/static/js/2.5c8a544c.chunk.js",
     "static/js/2.5c8a544c.chunk.js.map": "/random-quotes-2/static/js/2.5c8a544c.chunk.js.map",
     "index.html": "/random-quotes-2/index.html",
-    "precache-manifest.222f47b301c4f4a0e6122001294fc71d.js": "/random-quotes-2/precache-manifest.222f47b301c4f4a0e6122001294fc71d.js",
+    "precache-manifest.f59b62c8ac9da2b7a6cd1264da1d21c9.js": "/random-quotes-2/precache-manifest.f59b62c8ac9da2b7a6cd1264da1d21c9.js",
     "service-worker.js": "/random-quotes-2/service-worker.js",
-    "static/css/main.d86ebb1c.chunk.css.map": "/random-quotes-2/static/css/main.d86ebb1c.chunk.css.map",
+    "static/css/main.59964858.chunk.css.map": "/random-quotes-2/static/css/main.59964858.chunk.css.map",
     "static/js/2.5c8a544c.chunk.js.LICENSE.txt": "/random-quotes-2/static/js/2.5c8a544c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/random-quotes-2/static/media/twitter.7b101d93.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f0c81083.js",
     "static/js/2.5c8a544c.chunk.js",
-    "static/css/main.d86ebb1c.chunk.css",
+    "static/css/main.59964858.chunk.css",
     "static/js/main.bf7d5626.chunk.js"
   ]
 }
