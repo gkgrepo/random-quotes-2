@@ -1,10 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import "./styles-cards.css";
 import CardComponent from "./components/CardComponent/CardComponent";
 import data from "./data/quotes.json";
 import styled from "styled-components";
 
 const Div = styled.div`
+  @media (max-width: 800px) {
+    .card {
+      bottom: 10vh !important;
+      #text {
+        line-height: 25px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
   @media (max-width: 500px) {
     grid-template-columns: 0px 100% 0px;
 
@@ -14,31 +24,33 @@ const Div = styled.div`
       height: 50vh !important;
       /* max-height: 50vh; */
       margin: 0;
-      bottom: 30vh;
-
-      #text {
-        line-height: 25px;
-        font-size: 1.2rem;
-      }
+      bottom: 0vh !important;
     }
-  }
-
-  @media (max-width: 800px) {
   }
 `;
 
 function App() {
-  let cards = [];
+  let [cards, setCards] = useState([]);
 
   //Load 10 random cards from JSON "data";
+  console.log("Cards before PUSH", cards);
 
-  for (let i = 0; i < 10; i++) {
-    cards.push(data[Math.floor(Math.random() * data.length)]);
+  //Push new cards only when it's empty
+  if (cards.length === 0) {
+    for (let i = 0; i < 10; i++) {
+      cards.push(data[Math.floor(Math.random() * data.length)]);
+    }
   }
 
   useEffect(() => {
-    // data =
-  }, []);
+    console.log("redrawn");
+  }, [cards]);
+
+  const onCardDelete = () => {
+    cards.pop();
+    setCards([...cards]);
+    console.log("Card deleted", cards);
+  };
 
   return (
     <Div className="wrapper" id="quote-box">
@@ -52,6 +64,9 @@ function App() {
             text={cards[i].quoteText}
             author={cards[i].quoteAuthor}
             zIndex={i + 1}
+            top={cards[i + 1] === undefined ? "top" : null}
+            onDelete={onCardDelete}
+            angle={(Math.random() * 2 - 1) * 15}
           />
         ))}
       </div>
