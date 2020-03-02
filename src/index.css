@@ -63,6 +63,7 @@ body {
 .wrapper .cards .card {
   width: 90%;
   height: 300px;
+  max-height: 100%;
   background: radial-gradient(
     111.45% 311.7% at 50% 50%,
     #fff5d3 0%,
@@ -80,7 +81,7 @@ body {
   justify-items: center;
   position: absolute;
   /* top: calc(50%-150px); */
-  bottom: 0%;
+  bottom: 10vh;
   left: 0px;
   margin: 10% 5%;
 }
