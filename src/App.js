@@ -39,6 +39,7 @@ function App() {
   if (cards.length === 0) {
     for (let i = 0; i < 10; i++) {
       cards.push(data[Math.floor(Math.random() * data.length)]);
+      cards[i].angle = (Math.random() * 2 - 1) * 15;
     }
   }
 
@@ -66,7 +67,7 @@ function App() {
             zIndex={i + 1}
             top={cards[i + 1] === undefined ? "top" : null}
             onDelete={onCardDelete}
-            angle={(Math.random() * 2 - 1) * 15}
+            angle={cards[i].angle}
           />
         ))}
       </div>

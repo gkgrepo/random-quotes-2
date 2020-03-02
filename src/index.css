@@ -70,7 +70,7 @@ body {
   );
   border: 1px solid #727272;
   box-sizing: border-box;
-  /* box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25); */
+  /* box-shadow: 5px 5px 5px 1px rgba(94, 94, 94, 0.4); */
   border-radius: 25px;
   transform: rotate(0deg);
   display: grid;
@@ -84,6 +84,11 @@ body {
   left: 0px;
   margin: 10% 5%;
 }
+
+/* .wrapper .cards #text {
+  line-height: 25px;
+  font-size: 1.2rem;
+} */
 
 .wrapper .cards .card .quote {
   grid-column: 2/4;
