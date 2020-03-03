@@ -14,15 +14,10 @@ const CardComponent = props => {
   const cardRef = useRef(null);
 
   useEffect(() => {
-    // console.log("CardRef", cardRef);
-
     gsap.registerPlugin(Draggable);
-    // console.log("CardRef", cardRef);
+
     Draggable.create(cardRef.current, {
       type: "x,y",
-      onPress: function() {
-        //  alert("clicked");
-      },
       onDrag: function() {
         gsap.to(cardRef.current, 0.8, {
           rotationZ: this.deltaX * 1.2 + this.deltaY * 1,
@@ -49,21 +44,9 @@ const CardComponent = props => {
       gsap
         .to(cardRef.current, 0.8, { x: window.innerWidth / 2 + 300 })
         .eventCallback("onComplete", () => {
-          // console.log("state set to false");
-          // setShow(!show);
           props.unsetNextClicked();
           props.onCardDelete();
         });
-
-      // setShow(false);
-      // props.onCardDelete();
-      // props.unsetNextClicked();
-
-      // gsap
-      //   .to(cardRef.current, 1.5, { x: window.innerWidth / 2 + 300 })
-      //   .eventCallback("onComplete", () => setShow(false))
-      //   .eventCallback("onComplete", () => props.onCardDelete())
-      //   .eventCallback("onComplete", () => props.unsetNextClicked())
     }
   }, [props.nextClicked, show]);
 
@@ -90,7 +73,6 @@ const CardComponent = props => {
     });
   };
 
-  //   render() {
   return (
     show && (
       <Div
@@ -108,7 +90,6 @@ const CardComponent = props => {
       </Div>
     )
   );
-  //   }
 };
 
 export default CardComponent;

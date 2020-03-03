@@ -1,29 +1,10 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 @import url("https://fonts.googleapis.com/css?family=Catamaran|Courgette|Dancing+Script|Passion+One&display=swap");
 body {
   box-sizing: border-box;
   margin: 0;
   width: 100%;
   height: 100vh;
-  background: radial-gradient(
-    80.97% 211.77% at 50% 50%,
-    #ffffff 0%,
-    #c6c4c4 100%,
-    #c6c4c4 100%
-  );
+  background: radial-gradient( 80.97% 211.77% at 50% 50%, #ffffff 0%, #c6c4c4 100%, #c6c4c4 100%);
 }
 
 #root {
@@ -64,14 +45,9 @@ body {
   width: 90%;
   height: 300px;
   max-height: 100%;
-  background: radial-gradient(
-    111.45% 311.7% at 50% 50%,
-    #fff5d3 0%,
-    #ffffff 100%
-  );
+  background: radial-gradient( 111.45% 311.7% at 50% 50%, #fff5d3 0%, #ffffff 100%);
   border: 1px solid #727272;
   box-sizing: border-box;
-  /* box-shadow: 5px 5px 5px 1px rgba(94, 94, 94, 0.4); */
   border-radius: 25px;
   transform: rotate(0deg);
   display: grid;
@@ -80,16 +56,10 @@ body {
   align-items: center;
   justify-items: center;
   position: absolute;
-  /* top: calc(50%-150px); */
   bottom: 10vh;
   left: 0px;
   margin: 10% 5%;
 }
-
-/* .wrapper .cards #text {
-  line-height: 25px;
-  font-size: 1.2rem;
-} */
 
 .wrapper .cards .card .quote {
   grid-column: 2/4;

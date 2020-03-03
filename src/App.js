@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import "./styles-cards.css";
 import CardComponent from "./components/CardComponent/CardComponent";
 import data from "./data/quotes.json";
 import styled from "styled-components";
@@ -32,12 +31,8 @@ const Div = styled.div`
 function App() {
   let [cards, setCards] = useState([]);
   let [nextClicked, setNextClicked] = useState(false);
-  let [currentQuote, setCurrentQuote] = useState("");
-  let [currentAuthor, setCurrentAuthor] = useState("");
-  let curQuote = "";
 
   //Load 10 random cards from JSON "data";
-  // console.log("Cards before PUSH", cards);
 
   //Push new cards only when it's empty
   if (cards.length === 0) {
@@ -45,33 +40,20 @@ function App() {
       cards.push(data[Math.floor(Math.random() * data.length)]);
       cards[i].angle = (Math.random() * 2 - 1) * 15;
     }
-    // console.log("Cards", cards);
   }
 
-  useEffect(() => {
-    // console.log("redrawn");
-    //setCurrentQuote(document.querySelector("#text").innerHTML);
-    // setCurrentQuote(document.querySelector("#text").innerHTML);
-    // currentAuthor = setCurrentAuthor(
-    //   document.querySelector("#author").innerHTML
-    // );
-    // console.log(currentQuote, currentAuthor);
-  }, [cards, nextClicked]);
+  useEffect(() => {}, [cards, nextClicked]);
 
   const onCardDelete = () => {
     cards.pop();
     setCards([...cards]);
-    // console.log("Card deleted", cards);
   };
 
   const handleNextClicked = () => {
-    // console.log("handle Next called");
     setNextClicked(true);
   };
 
   const unsetNextClicked = () => {
-    // console.log("Unset Called");
-
     setNextClicked(false);
   };
 
