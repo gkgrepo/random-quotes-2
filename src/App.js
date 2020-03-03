@@ -33,7 +33,7 @@ function App() {
   let [cards, setCards] = useState([]);
 
   //Load 10 random cards from JSON "data";
-  console.log("Cards before PUSH", cards);
+  // console.log("Cards before PUSH", cards);
 
   //Push new cards only when it's empty
   if (cards.length === 0) {
@@ -44,13 +44,13 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("redrawn");
+    // console.log("redrawn");
   }, [cards]);
 
   const onCardDelete = () => {
     cards.pop();
     setCards([...cards]);
-    console.log("Card deleted", cards);
+    // console.log("Card deleted", cards);
   };
 
   return (

@@ -14,7 +14,7 @@ const CardComponent = props => {
   const cardRef = useRef(null);
 
   useEffect(() => {
-    console.log("CardRef", cardRef);
+    // console.log("CardRef", cardRef);
 
     gsap.registerPlugin(Draggable);
     Draggable.create(cardRef.current, {
@@ -30,6 +30,7 @@ const CardComponent = props => {
         });
       },
       onRelease: function() {
+        // console.log(this.endX);
         if (this.endX < window.innerWidth / 5) {
           //   gsap.to(".draggable", 0.4, {
           //     tranformOrigin: "top left",
@@ -38,6 +39,8 @@ const CardComponent = props => {
           //     rotationZ: 0
           //   });
           gsap.to(cardRef.current, 0.8, { x: 0, y: 0, rotation: 0 });
+        } else if (this.endX === undefined) {
+          //do nothing
         } else {
           gsap
             .to(cardRef.current, 0.4, { x: window.innerWidth + 300 })
