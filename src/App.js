@@ -38,25 +38,32 @@ function App() {
 
   //Push new cards only when it's empty
   if (cards.length === 0) {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 2; i++) {
       cards.push(data[Math.floor(Math.random() * data.length)]);
       cards[i].angle = (Math.random() * 2 - 1) * 15;
     }
+    console.log("Cards", cards);
   }
 
   useEffect(() => {
     // console.log("redrawn");
-    setNextClicked(false);
   }, [cards, nextClicked]);
 
   const onCardDelete = () => {
     cards.pop();
     setCards([...cards]);
-    // console.log("Card deleted", cards);
+    console.log("Card deleted", cards);
   };
 
   const handleNextClicked = () => {
+    console.log("handle Next called");
     setNextClicked(true);
+  };
+
+  const unsetNextClicked = () => {
+    console.log("Unset Called");
+
+    setNextClicked(false);
   };
 
   return (
@@ -71,10 +78,11 @@ function App() {
             text={cards[i].quoteText}
             author={cards[i].quoteAuthor}
             zIndex={i + 1}
-            top={cards[i + 1] === undefined ? "top" : null}
-            onDelete={onCardDelete}
+            top={cards[i + 1] === undefined ? true : false}
+            onCardDelete={onCardDelete}
             angle={cards[i].angle}
-            nextClicked={nextClicked}
+            nextClicked={nextClicked && cards[i + 1] === undefined}
+            unsetNextClicked={unsetNextClicked}
           />
         ))}
       </div>
