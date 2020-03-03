@@ -43,13 +43,22 @@ const CardComponent = props => {
           //do nothing
         } else {
           gsap
-            .to(cardRef.current, 0.4, { x: window.innerWidth + 300 })
+            .to(cardRef.current, 0.4, { x: window.innerWidth / 2 + 300 })
             .eventCallback("onComplete", () => setShow(false))
             .eventCallback("onComplete", () => props.onDelete());
         }
       }
     });
   }, [props.top]);
+
+  useEffect(() => {
+    if (props.nextClicked) {
+      gsap
+        .to(cardRef.current, 1.5, { x: window.innerWidth / 2 + 300 })
+        .eventCallback("onComplete", () => setShow(false))
+        .eventCallback("onComplete", () => props.onDelete());
+    }
+  }, [props.nextClicked]);
 
   const handleMouseOver = e => {
     gsap.to(cardRef.current, 0.2, {

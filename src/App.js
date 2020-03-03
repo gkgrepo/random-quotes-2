@@ -31,6 +31,7 @@ const Div = styled.div`
 
 function App() {
   let [cards, setCards] = useState([]);
+  let [nextClicked, setNextClicked] = useState(false);
 
   //Load 10 random cards from JSON "data";
   // console.log("Cards before PUSH", cards);
@@ -45,12 +46,17 @@ function App() {
 
   useEffect(() => {
     // console.log("redrawn");
-  }, [cards]);
+    setNextClicked(false);
+  }, [cards, nextClicked]);
 
   const onCardDelete = () => {
     cards.pop();
     setCards([...cards]);
     // console.log("Card deleted", cards);
+  };
+
+  const handleNextClicked = () => {
+    setNextClicked(true);
   };
 
   return (
@@ -68,6 +74,7 @@ function App() {
             top={cards[i + 1] === undefined ? "top" : null}
             onDelete={onCardDelete}
             angle={cards[i].angle}
+            nextClicked={nextClicked}
           />
         ))}
       </div>
@@ -75,7 +82,7 @@ function App() {
         <div href="http://facebook.com" className="facebook" />
         <div href="http://facebook.com" className="tumbler" />
         <div href="http://facebook.com" id="tweet-quote" className="twitter" />
-        <div className="NEXT" id="new-quote" />
+        <div className="NEXT" id="new-quote" onClick={handleNextClicked} />
       </div>
     </Div>
   );

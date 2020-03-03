@@ -201,6 +201,7 @@ body {
   background-position: center;
   margin: 0 20px;
   cursor: pointer;
+  display: none;
 }
 
 .play {
