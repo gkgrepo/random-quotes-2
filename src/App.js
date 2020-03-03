@@ -32,21 +32,28 @@ const Div = styled.div`
 function App() {
   let [cards, setCards] = useState([]);
   let [nextClicked, setNextClicked] = useState(false);
+  let [currentQuote, setCurrentQuote] = useState("");
+  let [currentAuthor, setCurrentAuthor] = useState("");
 
   //Load 10 random cards from JSON "data";
   // console.log("Cards before PUSH", cards);
 
   //Push new cards only when it's empty
   if (cards.length === 0) {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 10; i++) {
       cards.push(data[Math.floor(Math.random() * data.length)]);
       cards[i].angle = (Math.random() * 2 - 1) * 15;
     }
-    console.log("Cards", cards);
+    // console.log("Cards", cards);
   }
 
   useEffect(() => {
     // console.log("redrawn");
+    currentQuote = setCurrentQuote(document.querySelector("#text").innerHTML);
+    currentAuthor = setCurrentAuthor(
+      document.querySelector("#author").innerHTML
+    );
+    console.log(currentQuote, currentAuthor);
   }, [cards, nextClicked]);
 
   const onCardDelete = () => {
@@ -89,7 +96,12 @@ function App() {
       <div className="footer">
         <div href="http://facebook.com" className="facebook" />
         <div href="http://facebook.com" className="tumbler" />
-        <div href="http://facebook.com" id="tweet-quote" className="twitter" />
+        <a
+          href={`https://twitter.com/intent/tweet?text="${currentQuote}" - ${currentAuthor} `}
+          target="_blank"
+          id="tweet-quote"
+          className="twitter"
+        />
         <div className="NEXT" id="new-quote" onClick={handleNextClicked} />
       </div>
     </Div>

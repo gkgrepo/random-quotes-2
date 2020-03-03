@@ -106,12 +106,10 @@ const CardComponent = props => {
         onMouseLeave={handleMouseLeave}
         ref={cardRef}
       >
-        <div className="quote" id="text">
-          {/* We can only learn to love by loving. */}
+        <div className="quote" id={props.top ? "text" : null}>
           {props.text}
         </div>
-        <div className="author" id="author">
-          {/* Iris Murdoch */}
+        <div className="author" id={props.top ? "author" : null}>
           {props.author}
         </div>
       </Div>

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Your Website Title</title>
+    <!-- Comment #1: OG Tags -->
+    <meta
+      property="og:url"
+      content="http://www.your-domain.com/your-page.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="Your description" />
+    <meta
+      property="og:image"
+      content="http://www.your-domain.com/path/image.jpg"
+    />
+  </head>
+  <body>
+    <!-- Comment #2: SDK -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Comment #3: Content -->
+    <h1>Your Headline</h1>
+    <p class="fb-quotable" layout="button">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget
+      tristique nibh, vel consequat purus. Praesent molestie, turpis ut ultrices
+      commodo, felis arcu cursus enim, vel porttitor ante quam vel lacus.
+      Quisque at laoreet sapien. Proin nec purus dolor. Integer pharetra nec
+      ligula a condimentum. Fusce sem orci, porta ut felis id, commodo imperdiet
+      risus.
+    </p>
+
+    <!-- Comment #4: Plugin Code -->
+    <div class="fb-quote">Hello World</div>
+  </body>
+</html>
