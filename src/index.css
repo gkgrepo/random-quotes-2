@@ -138,50 +138,35 @@ body {
   grid-row: 3 / 4;
   align-self: baseline;
   display: grid;
-  grid-template-columns: 40px 40px 40px 8fr 2fr 20px;
+  grid-template-columns: 80px 8fr 2fr 20px;
   grid-template-rows: minmax(50px, 1fr) 1fr 2fr;
   align-items: center;
   justify-items: end;
 }
 
-.facebook {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  width: 25px;
-  height: 25px;
-  background-image: url("./images/facebook.svg");
-  background-size: cover;
-  background-position: center;
-  margin: 20px;
-  display: none;
-}
-
-.tumbler {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  width: 25px;
-  height: 25px;
-  background-image: url("./images/tumbler.svg");
-  background-size: cover;
-  background-position: center;
-  margin: 0 20px;
-  display: none;
-}
-
 .twitter {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 1/2;
   width: 25px;
   height: 25px;
   background-image: url("./images/twitter.svg");
   background-size: cover;
   background-position: center;
-  margin: 0 20px;
+  margin: auto;
   display: block;
 }
 
+.built-by {
+  font-weight: 800;
+  font-size: small;
+  color: gray;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: auto;
+}
+
 .NEXT {
-  grid-column: 5/6;
+  grid-column: 3/4;
   grid-row: 1/2;
   width: 55px;
   height: 25px;
@@ -191,15 +176,6 @@ body {
   margin: 0 20px;
   display: block;
   cursor: pointer;
-}
-
-.built-by {
-  font-weight: 800;
-  font-size: small;
-  color: gray;
-  grid-column: 4/5;
-  grid-row: 2/3;
-  margin: auto;
 }
 
 .wrapper .header .pause {
