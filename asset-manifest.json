@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/random-quotes-2/static/css/main.de9cd2a8.chunk.css",
-    "main.js": "/random-quotes-2/static/js/main.b7446e4e.chunk.js",
-    "main.js.map": "/random-quotes-2/static/js/main.b7446e4e.chunk.js.map",
-    "runtime-main.js": "/random-quotes-2/static/js/runtime-main.f0c81083.js",
-    "runtime-main.js.map": "/random-quotes-2/static/js/runtime-main.f0c81083.js.map",
-    "static/js/2.14a20f2d.chunk.js": "/random-quotes-2/static/js/2.14a20f2d.chunk.js",
-    "static/js/2.14a20f2d.chunk.js.map": "/random-quotes-2/static/js/2.14a20f2d.chunk.js.map",
-    "index.html": "/random-quotes-2/index.html",
-    "precache-manifest.d991c6012ff0b7e6d6096c052280496c.js": "/random-quotes-2/precache-manifest.d991c6012ff0b7e6d6096c052280496c.js",
-    "service-worker.js": "/random-quotes-2/service-worker.js",
-    "static/css/main.de9cd2a8.chunk.css.map": "/random-quotes-2/static/css/main.de9cd2a8.chunk.css.map",
-    "static/js/2.14a20f2d.chunk.js.LICENSE.txt": "/random-quotes-2/static/js/2.14a20f2d.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/random-quotes-2/static/media/twitter.7b101d93.svg"
+    "main.css": "/static/css/main.5360e150.chunk.css",
+    "main.js": "/static/js/main.153375a0.chunk.js",
+    "main.js.map": "/static/js/main.153375a0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5035b98f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5035b98f.js.map",
+    "static/js/2.6303e500.chunk.js": "/static/js/2.6303e500.chunk.js",
+    "static/js/2.6303e500.chunk.js.map": "/static/js/2.6303e500.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.36e680970497d0843a71f323453e676d.js": "/precache-manifest.36e680970497d0843a71f323453e676d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5360e150.chunk.css.map": "/static/css/main.5360e150.chunk.css.map",
+    "static/js/2.6303e500.chunk.js.LICENSE.txt": "/static/js/2.6303e500.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/twitter.7b101d93.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0c81083.js",
-    "static/js/2.14a20f2d.chunk.js",
-    "static/css/main.de9cd2a8.chunk.css",
-    "static/js/main.b7446e4e.chunk.js"
+    "static/js/runtime-main.5035b98f.js",
+    "static/js/2.6303e500.chunk.js",
+    "static/css/main.5360e150.chunk.css",
+    "static/js/main.153375a0.chunk.js"
   ]
 }
