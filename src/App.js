@@ -107,6 +107,7 @@ function App() {
           className="twitter"
         />
         <div className="NEXT" id="new-quote" onClick={handleNextClicked} />
+        <div className="built-by">Built by George K.</div>
       </div>
     </Div>
   );
