@@ -17,6 +17,7 @@ const CardComponent = props => {
     // console.log("CardRef", cardRef);
 
     gsap.registerPlugin(Draggable);
+    // console.log("CardRef", cardRef);
     Draggable.create(cardRef.current, {
       type: "x,y",
       onPress: function() {
@@ -24,20 +25,12 @@ const CardComponent = props => {
       },
       onDrag: function() {
         gsap.to(cardRef.current, 0.8, {
-          //   tranformOrigin: "bottom 50%",
           rotationZ: this.deltaX * 1.2 + this.deltaY * 1,
           rotationX: this.deltaY * 0
         });
       },
       onRelease: function() {
-        // console.log(this.endX);
         if (this.endX < window.innerWidth / 5) {
-          //   gsap.to(".draggable", 0.4, {
-          //     tranformOrigin: "top left",
-          //     rotationX: 0,
-          //     rotationY: 0,
-          //     rotationZ: 0
-          //   });
           gsap.to(cardRef.current, 0.8, { x: 0, y: 0, rotation: 0 });
         } else if (this.endX === undefined) {
           //do nothing
@@ -56,7 +49,7 @@ const CardComponent = props => {
       gsap
         .to(cardRef.current, 0.8, { x: window.innerWidth / 2 + 300 })
         .eventCallback("onComplete", () => {
-          console.log("state set to false");
+          // console.log("state set to false");
           // setShow(!show);
           props.unsetNextClicked();
           props.onCardDelete();

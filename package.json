@@ -13,7 +13,6 @@
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1"
   },
-  "homepage": "https://gkgrepo.github.io/random-quotes-2/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

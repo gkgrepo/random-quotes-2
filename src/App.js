@@ -5,12 +5,12 @@ import data from "./data/quotes.json";
 import styled from "styled-components";
 
 const Div = styled.div`
-  @media (max-width: 800px) {
+  @media (max-width: 1300px) {
     .card {
       bottom: 10vh !important;
-      #text {
-        line-height: 25px;
-        font-size: 1.2rem;
+      .quote {
+        line-height: 25px !important;
+        font-size: 1.2rem !important;
       }
     }
   }
@@ -34,6 +34,7 @@ function App() {
   let [nextClicked, setNextClicked] = useState(false);
   let [currentQuote, setCurrentQuote] = useState("");
   let [currentAuthor, setCurrentAuthor] = useState("");
+  let curQuote = "";
 
   //Load 10 random cards from JSON "data";
   // console.log("Cards before PUSH", cards);
@@ -49,26 +50,27 @@ function App() {
 
   useEffect(() => {
     // console.log("redrawn");
-    currentQuote = setCurrentQuote(document.querySelector("#text").innerHTML);
-    currentAuthor = setCurrentAuthor(
-      document.querySelector("#author").innerHTML
-    );
-    console.log(currentQuote, currentAuthor);
+    //setCurrentQuote(document.querySelector("#text").innerHTML);
+    // setCurrentQuote(document.querySelector("#text").innerHTML);
+    // currentAuthor = setCurrentAuthor(
+    //   document.querySelector("#author").innerHTML
+    // );
+    // console.log(currentQuote, currentAuthor);
   }, [cards, nextClicked]);
 
   const onCardDelete = () => {
     cards.pop();
     setCards([...cards]);
-    console.log("Card deleted", cards);
+    // console.log("Card deleted", cards);
   };
 
   const handleNextClicked = () => {
-    console.log("handle Next called");
+    // console.log("handle Next called");
     setNextClicked(true);
   };
 
   const unsetNextClicked = () => {
-    console.log("Unset Called");
+    // console.log("Unset Called");
 
     setNextClicked(false);
   };
@@ -97,7 +99,9 @@ function App() {
         <div href="http://facebook.com" className="facebook" />
         <div href="http://facebook.com" className="tumbler" />
         <a
-          href={`https://twitter.com/intent/tweet?text="${currentQuote}" - ${currentAuthor} `}
+          href={`https://twitter.com/intent/tweet?text="${
+            cards[cards.length - 1].quoteText
+          }" - ${cards[cards.length - 1].quoteAuthor} `}
           target="_blank"
           id="tweet-quote"
           className="twitter"
